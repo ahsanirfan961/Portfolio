@@ -9,42 +9,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="scripts/index-script.js"></script>
+    <link rel="stylesheet" href="styles/elements.css">
+    <script type="module" src="scripts/index-script.js"></script>
 </head>
 
 <body>
-    <div id="bg-gradient">
-
-    </div>
-    <header>
-        <nav id="nav-bar">
-            <div id="header-options">
-                <a href="index.html">
-                    <h2>Portfolio</h2>
+    <div id="bg-gradient"></div>
+    <div id="header"></div>
+    <div class="card" id="intro-card">
+        <img src="assets/img/me.jpg" alt="" class="card">
+        <div class="intro-contents">
+            <h4>Hello Everybody, I am</h4>
+            <h1 id="name">Muhammad Ahsan</h1>
+            <h3 id="position">Android & Flutter Developer</h3>
+            <h4>a passionate student, studying Software Enginnering from National University of Science & Technology, Pakistan</h4>
+            <div style="display: flex;flex-direction: column;">
+                <a href="">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <p>14th July 2004</p>
                 </a>
-                <button id="options-btn">
-                    <i class="fa-solid fa-bars"></i>
+                <a href="">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+92-349-6785199</p>
+                </a>
+                <a href="">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>ahsanirfan961@gmail.com</p>
+                </a>
+                <a href="">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>NUST, H-12 Islamabad</p>
+                </a>
+            </div>
+            <div>
+                <button>
+                    <i class="fa-brands fa-facebook"></i>
+                </button>
+                <button>
+                    <i class="fa-brands fa-linkedin"></i>
+                </button>
+                <button>
+                    <i class="fa-brands fa-instagram"></i>
+                </button>
+                <button>
+                    <i class="fa-brands fa-github"></i>
                 </button>
             </div>
-            <ul id="header-list">
-                <li><a href="">
-                        <h5>About</h5>
-                    </a></li>
-                <li><a href="">
-                        <h5>Services</h5>
-                    </a></li>
-                <li><a href="">
-                        <h5>Experience</h5>
-                    </a></li>
-                <li><a href="">
-                        <h5>Projects</h5>
-                    </a></li>
-                <li><a href="">
-                        <h5>Contact</h5>
-                    </a></li>
-            </ul>
-        </nav>
-    </header>
+        </div>
+    </div>
 </body>
 
 </html>

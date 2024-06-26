@@ -1,14 +1,19 @@
-document.addEventListener('DOMContentLoaded', function () {
-    let optionsButton = document.getElementById('options-btn');
-    optionsButton.addEventListener('click', function () {
-        const optionList = document.getElementById('header-list');
-        const navBar = document.getElementById('nav-bar');
-        if (optionList.classList.contains('active')) {
-            optionsButton.innerHTML = '<i class="fa-solid fa-bars"></i>'
-            optionList.classList.remove('active');
-        } else {
-            optionsButton.innerHTML = '<i class="fa-solid fa-xmark"></i>'
-            optionList.classList.add('active');
-        }
+
+import { optionsButtonListener } from "./header-script.js";
+
+loadDependencies().then(()=>{
+    optionsButtonListener();
+})
+
+function loadHeader() {
+    return fetch('elements/header.html').then(response => response.text()).then(data => {
+        document.getElementById('header').innerHTML = data;
+    }).catch(error => {
+        console.error('Error loading: ', error);
     });
-});
+}
+
+function loadDependencies()
+{
+    return Promise.all([loadHeader()]);
+}
