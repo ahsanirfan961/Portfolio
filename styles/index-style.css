@@ -21,7 +21,7 @@ h4 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 110vh;
+    height: 90vh;
     position: absolute;
     z-index: -1;
 }
@@ -40,11 +40,15 @@ h4 {
         width: 90%;
         gap: 2vh;
     }
+    .intro-contents button:hover {
+        background-color: black;
+        color: white;
+    }
 }
 
 @media (min-width: 1024px) {
     #intro-card {
-        margin-top: 10%;
+        margin-top: 5%;
         width: 70%;
         img {
             width: 55%;    
@@ -54,6 +58,10 @@ h4 {
     .intro-contents {
         width: 30%;
         justify-content: space-around;
+    }
+    .intro-contents button:hover {
+        background-image: linear-gradient(to right, #766EFF, #61edfd);
+        color: white;
     }
 }
 
@@ -91,9 +99,7 @@ h4 {
     border-radius: 0.2rem;
     font-size: 1.5rem;
     transition: 100ms;
+    padding: 5px;
+    padding-inline: 10px;
 }
 
-.intro-contents button:hover {
-    background-image: linear-gradient(to right, #766EFF, #61edfd);
-    color: white;
-}
