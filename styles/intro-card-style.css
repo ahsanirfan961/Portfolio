@@ -1,0 +1,76 @@
+@media (max-width: 480px) {
+    #intro-card {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 10%;
+        img {
+            width: 90%;    
+        }
+        align-items: center;
+    }
+    .intro-contents {
+        width: 90%;
+        gap: 2vh;
+    }
+    .intro-contents button:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+@media (min-width: 1024px) {
+    #intro-card {
+        margin-top: 5%;
+        width: 70%;
+        img {
+            width: 55%;    
+        }
+        padding: 2%;
+    }
+    .intro-contents {
+        width: 30%;
+        justify-content: space-around;
+    }
+    .intro-contents button:hover {
+        background-image: linear-gradient(to right, #766EFF, #61edfd);
+        color: white;
+    }
+}
+
+#intro-card {
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.intro-contents {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#name {
+    font-size: 3rem;
+}
+
+.intro-contents a {
+    padding: 2%;
+    display: flex;
+    color: gray;
+    i {
+        color: #afabfb;
+        font-size: 1.2rem;
+        float: left;
+        margin-right: 10%;
+    }
+}
+
+.intro-contents button {
+    border-radius: 0.2rem;
+    font-size: 1.5rem;
+    transition: 100ms;
+    padding: 5px;
+    padding-inline: 10px;
+}

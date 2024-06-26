@@ -13,6 +13,13 @@ function loadHeader() {
         console.error('Error loading: ', error);
     });
 }
+function loadIntroduction() {
+    return fetch('elements/intro-card.html').then(response => response.text()).then(data => {
+        document.getElementById('contents').innerHTML += data;
+    }).catch(error => {
+        console.error('Error loading: ', error);
+    });
+}
 
 function loadData() {
     fetch('data.json').then(response => response.json()).then(data => {
@@ -40,5 +47,5 @@ function loadData() {
 
 function loadDependencies()
 {
-    return Promise.all([loadHeader()]);
+    return Promise.all([loadHeader(), loadIntroduction()]);
 }
