@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('options-btn').addEventListener('click', function () {
+    let optionsButton = document.getElementById('options-btn');
+    optionsButton.addEventListener('click', function () {
         const optionList = document.getElementById('header-list');
         const navBar = document.getElementById('nav-bar');
         if (optionList.classList.contains('active')) {
-            navBar.style.height = '10vh';
+            optionsButton.innerHTML = '<i class="fa-solid fa-bars"></i>'
             optionList.classList.remove('active');
         } else {
-            navBar.style.height = '30vh';
+            optionsButton.innerHTML = '<i class="fa-solid fa-xmark"></i>'
             optionList.classList.add('active');
         }
     });

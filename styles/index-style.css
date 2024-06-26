@@ -9,7 +9,6 @@
 {
     nav {
         background-color: black;
-        height: 10vh;
         flex-direction: column;
         justify-content: center;
         transition: 100ms ease-in-out;
@@ -23,7 +22,6 @@
         flex-direction: column;
         width: 100%;
         margin-top: 1vh;
-        height: 0;
         * {
             display: none;
         }
@@ -34,11 +32,12 @@
         * {
             display: block;
         }
-        height: auto;
     }
 
     #header-list li {
-        padding: 10px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-inline: 10%;
         border-top: 1px solid rgb(178, 177, 177);
     }
 
@@ -55,6 +54,8 @@
         display: flex;
         justify-content: space-around;
         gap: 40%;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
 }
 
