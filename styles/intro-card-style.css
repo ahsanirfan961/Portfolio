@@ -28,7 +28,7 @@
         width: 70%;
     }
     #intro-card {
-        margin-top: 10%;
+        margin-top: 20%;
         img {
             width: 55%;    
         }
@@ -100,6 +100,8 @@
 #achievements {
     display: flex;
     flex-wrap: wrap;
+    gap: 5%;
+    row-gap: 3vh;
 }
 
 .achievement-box {
@@ -109,6 +111,37 @@
 
     i {
         font-size: 1.5rem;
-        mask-image: linear-gradient(to right, #766EFF, #61edfd);
+        background: linear-gradient(to right, #766EFF, #2ae6fb);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.skill > h4 {
+    font-weight: 500;
+    color: black;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 2vh;
+    border: 1px solid lightgray;
+    border-radius: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar > div {
+    width: 99%;
+    height: 80%;
+    background-color: lightgray;
+    border-radius: 0.7vh;
+
+    div {
+        background-image: linear-gradient(to right, #766EFF, #2ae6fb);
+        height: 100%;
+        border-radius: 0.7vh;
+        width: 60%;
     }
 }
