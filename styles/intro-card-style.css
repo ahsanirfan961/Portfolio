@@ -1,8 +1,10 @@
 @media (max-width: 480px) {
+    #introduction {
+        width: 100%;
+    }
     #intro-card {
         flex-direction: column;
-        width: 100%;
-        padding-top: 10%;
+        padding-top: 25%;
         img {
             width: 90%;    
         }
@@ -16,12 +18,17 @@
         background-color: black;
         color: white;
     }
+    #about {
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 1024px) {
-    #intro-card {
-        margin-top: 5%;
+    #introduction {
         width: 70%;
+    }
+    #intro-card {
+        margin-top: 10%;
         img {
             width: 55%;    
         }
@@ -73,4 +80,35 @@
     transition: 100ms;
     padding: 5px;
     padding-inline: 10px;
+}
+
+#about {
+    display: flex;
+    margin-top: 5%;
+}
+
+.about-section {
+    padding: 5%;
+    flex: 1;
+
+    h4 {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+#achievements {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.achievement-box {
+    border: 1px solid lightgray;
+    border-radius: 5%;
+    padding: 5%;
+
+    i {
+        font-size: 1.5rem;
+        mask-image: linear-gradient(to right, #766EFF, #61edfd);
+    }
 }

@@ -2,7 +2,7 @@
 import { optionsButtonListener } from "./header-script.js";
 
 loadDependencies().then(()=>{
-    optionsButtonListener();
+    addAllListeners();
     loadData();
 })
 
@@ -49,3 +49,20 @@ function loadDependencies()
 {
     return Promise.all([loadHeader(), loadIntroduction()]);
 }
+
+function addAllListeners() {
+    addScrollListeners();
+    optionsButtonListener();
+}
+
+function addScrollListeners() {
+    document.addEventListener('scroll', function () {
+        const header = document.getElementById('nav-bar');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        }
+        else {
+            header.classList.remove('scrolled');
+        }
+    });
+}9

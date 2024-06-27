@@ -52,7 +52,7 @@
 @media (min-width: 1000px)
 {
     nav {
-        height: 15vh;
+        height: 10vh;
         justify-content: space-around;
     }
 
@@ -66,6 +66,12 @@ nav {
     width: 100%;
     color: white;
     align-items: center;
+    position: fixed;
+    transition: background-color 0.3s;
+}
+
+nav.scrolled {
+    background-color: black;
 }
 
 nav a {
