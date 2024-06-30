@@ -1,4 +1,5 @@
 
+
 import { addNavBarListeners, optionsButtonListener } from "./header-script.js";
 
 let data_loaded = '';
@@ -6,8 +7,13 @@ let data_loaded = '';
 loadDependencies().then(() => {
     addAllListeners();
     loadData();
-})
-
+});//then(()=> {
+//     window.scrollTo({
+//         top: document.getElementById('services-section').offsetTop,
+//         behavior: 'instant'
+//     });
+// });
+    
 function loadHeader() {
     return fetch('elements/header.html').then(response => response.text()).then(data => {
         document.getElementById('header').innerHTML = data;
@@ -36,6 +42,13 @@ function loadTimeline() {
         console.error('Error loading: ', error);
     });
 }
+function loadServices() {
+    return fetch('elements/services.html').then(response => response.text()).then(data => {
+        document.getElementById('contents').innerHTML += data;
+    }).catch(error => {
+        console.error('Error loading: ', error);
+    });
+}
 
 function loadData() {
     fetch('data.json').then(response => response.json()).then(data => {
@@ -43,6 +56,7 @@ function loadData() {
         loadIntroCardData(data);
         loadAboutSectionData(data);
         loadTimelineData(data.experience);
+        loadServicesData(data);
     });
 }
 
@@ -119,7 +133,7 @@ function loadAboutSectionData(data) {
 }
 
 function loadTimelineData(timeline_data) {
-    fetch('elements/timeline-bar.html').then(response => response.text()).then(barCode => {
+    return fetch('elements/timeline-bar.html').then(response => response.text()).then(barCode => {
         const timeline = document.getElementById('timeline-container');
         timeline.innerHTML = '';
         timeline_data.forEach(element => {
@@ -147,8 +161,29 @@ function loadTimelineData(timeline_data) {
     });
 }
 
+function loadServicesData(data) {
+    const services = document.getElementById('services');
+    data.services.forEach(element => {
+        const service = document.createElement('div');
+        service.className = 'service card';
+
+        let logo = document.createElement('img');
+        logo.src = element.logo_path;
+        let heading = document.createElement('h3');
+        heading.innerText = element.title;
+        let subHeading = document.createElement('h4');
+        subHeading.innerText = element.description;
+
+        service.appendChild(logo);
+        service.appendChild(heading);
+        service.appendChild(subHeading);
+
+        services.appendChild(service);
+    });
+}
+
 function loadDependencies() {
-    return Promise.all([loadHeader(), loadFooter()]).then(()=>loadIntroduction()).then(()=>loadTimeline());
+    return Promise.all([loadHeader(), loadFooter()]).then(() => loadIntroduction()).then(() => loadTimeline()).then(() => loadServices());
 }
 
 function addAllListeners() {

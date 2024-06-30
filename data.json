@@ -84,7 +84,7 @@
         {
             "from": "2018",
             "to": "2020",
-            "organization": "Becaonhouse School System",
+            "organization": "Beaconhouse School System",
             "position": "Matriculation with 95% marks"
         },
         {
@@ -98,6 +98,23 @@
             "to": "present\nexpected graduation 2026",
             "organization": "National University of Science & Technology, Islamabad",
             "position": "Software Engineering"
+        }
+    ],
+    "services": [
+        {
+            "logo_path": "assets/img/flutter-logo.png",
+            "title": "Flutter Development",
+            "description": "I specialize in creating high-performance, cross-platform applications using Flutter. My expertise includes building dynamic user interfaces, integrating APIs, and optimizing performance for a seamless user experience on both iOS and Android"
+        },
+        {
+            "logo_path": "assets/img/android-logo.png",
+            "title": "Android Development",
+            "description": "I have experience in developing native Android applications using Java and Kotlin. I am proficient in creating user-friendly interfaces, integrating APIs, and ensuring high performance and responsiveness of applications"
+        },
+        {
+            "logo_path": "assets/img/web-logo.png",
+            "title": "Web Development",
+            "description": "I specialize in creating high-performance, cross-platform applications using Flutter. My expertise includes building dynamic user interfaces, integrating APIs, and optimizing performance for a seamless user experience on both iOS and Android"
         }
     ]
 }

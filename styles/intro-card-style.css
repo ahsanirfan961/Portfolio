@@ -20,17 +20,18 @@
     }
     #about {
         flex-direction: column;
+        padding: 5%;
     }
 }
 
 @media (min-width: 1024px) {
     #introduction {
-        width: 70%;
+        width: 80%;
     }
     #intro-card {
         margin-top: 20%;
         img {
-            width: 55%;    
+            width: 60%;    
         }
         padding: 2%;
     }
@@ -89,6 +90,7 @@
 
 .about-section {
     padding: 5%;
+    padding-inline: 2%;
     flex: 1;
 
     h4 {
@@ -98,10 +100,6 @@
 }
 
 #achievements {
-    /* display: flex;
-    flex-wrap: wrap;
-    gap: 5%;
-    row-gap: 3vh; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5%;
