@@ -1,7 +1,7 @@
 
 import { optionsButtonListener } from "./header-script.js";
 
-loadDependencies().then(()=>{
+loadDependencies().then(() => {
     addAllListeners();
     loadData();
 })
@@ -13,8 +13,22 @@ function loadHeader() {
         console.error('Error loading: ', error);
     });
 }
+function loadFooter() {
+    return fetch('elements/footer.html').then(response => response.text()).then(data => {
+        document.getElementById('footer').innerHTML = data;
+    }).catch(error => {
+        console.error('Error loading: ', error);
+    });
+}
 function loadIntroduction() {
     return fetch('elements/intro-card.html').then(response => response.text()).then(data => {
+        document.getElementById('contents').innerHTML += data;
+    }).catch(error => {
+        console.error('Error loading: ', error);
+    });
+}
+function loadTimeline() {
+    return fetch('elements/timeline.html').then(response => response.text()).then(data => {
         document.getElementById('contents').innerHTML += data;
     }).catch(error => {
         console.error('Error loading: ', error);
@@ -25,6 +39,7 @@ function loadData() {
     fetch('data.json').then(response => response.json()).then(data => {
         loadIntroCardData(data);
         loadAboutSectionData(data);
+        loadTimelineData(data);
     });
 }
 
@@ -86,13 +101,13 @@ function loadAboutSectionData(data) {
         heading.innerText = element.name + ' ' + element.percentage;
 
         let progress = document.createElement('div');
-        progress.style.width = element.percentage;  
+        progress.style.width = element.percentage;
         let middle = document.createElement('div');
         middle.appendChild(progress);
         let progressBar = document.createElement('div');
-        progressBar.appendChild(middle); 
+        progressBar.appendChild(middle);
         progressBar.className = 'progress-bar';
-        
+
         skill.appendChild(heading);
         skill.appendChild(progressBar);
 
@@ -100,9 +115,36 @@ function loadAboutSectionData(data) {
     });
 }
 
-function loadDependencies()
-{
-    return Promise.all([loadHeader(), loadIntroduction()]);
+function loadTimelineData(data) {
+    fetch('elements/timeline-bar.html').then(response => response.text()).then(barCode => {
+        const timeline = document.getElementById('timeline-container');
+        data.experience.forEach(element => {
+            const timeline_element = document.createElement('div');
+            timeline_element.className = 'timeline-element';
+
+            const duration = document.createElement('h4');
+            duration.innerText = `${element.from} to ${element.to}`;
+            timeline_element.appendChild(duration);
+
+            timeline_element.innerHTML += barCode;
+
+            const contents = document.createElement('div');
+            contents.className = 'timeline-element-contents';
+            const heading = document.createElement('h2');
+            heading.innerText = element.organization;
+            const sub_heading = document.createElement('h4');
+            sub_heading.innerText = element.position;
+            contents.appendChild(heading);
+            contents.appendChild(sub_heading);
+            timeline_element.appendChild(contents);
+
+            timeline.appendChild(timeline_element);
+        });
+    });
+}
+
+function loadDependencies() {
+    return Promise.all([loadHeader(), loadFooter(), loadIntroduction(), loadTimeline()]);
 }
 
 function addAllListeners() {
@@ -120,4 +162,4 @@ function addScrollListeners() {
             header.classList.remove('scrolled');
         }
     });
-}9
+} 9

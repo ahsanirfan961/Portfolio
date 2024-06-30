@@ -98,10 +98,14 @@
 }
 
 #achievements {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     gap: 5%;
-    row-gap: 3vh;
+    row-gap: 3vh; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    row-gap: 10%;
 }
 
 .achievement-box {

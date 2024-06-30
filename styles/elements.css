@@ -3,3 +3,65 @@
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 0.1rem 1rem;
 }
+
+.btn {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 1rem;
+    padding-inline: 2rem;
+    font-weight: 600;
+}
+
+.btn.deselected {
+    background-color: rgba(255, 255, 255, 0.262);
+}
+
+@media (min-width: 1024px)
+{
+    .timeline-bar {
+        position: relative;
+        .bar {
+            width: 5px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.3);
+            position: absolute;
+        }
+
+        .point {
+            width: 16px;
+            background-color: rgba(255, 255, 255, 0.3);
+            height: 16px;
+            border-radius: 8px;
+            position: absolute;
+
+            div {
+                width: 8px;
+                background-color: white;
+                height: 8px;
+                border-radius: 5px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+.m-1 {
+    margin: 1%;
+}
+.m-2 {
+    margin: 2%;
+}
+.m-3 {
+    margin: 3%;
+}
+.m-4 {
+    margin: 4%;
+}
+.m-5 {
+    margin: 5%;
+}

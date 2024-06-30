@@ -53,5 +53,37 @@
             "name": "Communication Skills",
             "percentage": "80%"
         }
+    ],
+    "experience": [
+        {
+            "from": "June 2023",
+            "to": "July 2023",
+            "organization": "D.G Cement Company Ltd",
+            "position": "Information techonology intern"
+        },
+        {
+            "from": "Jan 2023",
+            "to": "June 2024",
+            "organization": "National University of Science & Technology",
+            "position": "Mess committee member"
+        },
+        {
+            "from": "Sep 2023",
+            "to": "June 2024",
+            "organization": "Hack Club NUST",
+            "position": "Deputy Director Social Media Marketing"
+        },
+        {
+            "from": "June 2024",
+            "to": "present",
+            "organization": "M- Labs, Mindstorm Studios",
+            "position": "Game Programmer Intern"
+        },
+        {
+            "from": "June 2024",
+            "to": "present",
+            "organization": "Mach Vis Lab, NUST",
+            "position": "Deep Learning Intern"
+        }
     ]
 }
