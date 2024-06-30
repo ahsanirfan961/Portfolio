@@ -20,8 +20,20 @@
     background-color: rgba(255, 255, 255, 0.262);
 }
 
+@media (max-width: 480px) {
+    .section-content-grid {
+        display: block;
+    }
+}
+
 @media (min-width: 1024px)
 {
+    .section-content-grid {
+        display: grid;
+        gap: 5%;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     .timeline-bar {
         z-index: 0;
         position: relative;
@@ -51,6 +63,23 @@
             }
         }
     }
+}
+
+.section {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        font-weight: 700;
+    }
+}
+
+.section-content-grid {
+    margin-top: 5%;
+    height: fit-content;
 }
 
 .bg-gradient {

@@ -49,6 +49,13 @@ function loadServices() {
         console.error('Error loading: ', error);
     });
 }
+function loadProjects() {
+    return fetch('elements/projects.html').then(response => response.text()).then(data => {
+        document.getElementById('contents').innerHTML += data;
+    }).catch(error => {
+        console.error('Error loading: ', error);
+    });
+}
 
 function loadData() {
     fetch('data.json').then(response => response.json()).then(data => {
@@ -57,6 +64,7 @@ function loadData() {
         loadAboutSectionData(data);
         loadTimelineData(data.experience);
         loadServicesData(data);
+        loadProjectsData(data);
     });
 }
 
@@ -182,8 +190,35 @@ function loadServicesData(data) {
     });
 }
 
+function loadProjectsData(data) {
+    const projects = document.getElementById('projects');
+    let binoCode = '<i class="fa-solid fa-binoculars"></i>';
+    data.projects.forEach(element => {
+        const project = document.createElement('div');
+        project.className = 'project';
+
+        let image = document.createElement('img');
+        image.src = element.image_path;
+        image.className = 'card';
+        let div = document.createElement('div');
+        div.appendChild(image);
+        div.innerHTML += binoCode;
+        project.appendChild(div);
+
+        let heading = document.createElement('h3');
+        heading.innerText = element.name;
+        let tools = document.createElement('h4');
+        tools.innerText = element.tools;
+        project.appendChild(heading);
+        project.appendChild(tools);
+
+        projects.appendChild(project);
+    });
+
+}
+
 function loadDependencies() {
-    return Promise.all([loadHeader(), loadFooter()]).then(() => loadIntroduction()).then(() => loadTimeline()).then(() => loadServices());
+    return Promise.all([loadHeader(), loadFooter()]).then(() => loadIntroduction()).then(() => loadTimeline()).then(() => loadServices().then(() => loadProjects()));
 }
 
 function addAllListeners() {

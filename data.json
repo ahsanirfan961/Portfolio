@@ -116,5 +116,28 @@
             "title": "Web Development",
             "description": "I specialize in creating high-performance, cross-platform applications using Flutter. My expertise includes building dynamic user interfaces, integrating APIs, and optimizing performance for a seamless user experience on both iOS and Android"
         }
+    ],
+    "projects": [
+        {
+            "name": "Metro Route Finder Islamabad",
+            "description": "A mobile application that allows users to browse and purchase products from various categories. The app features a user-friendly interface, secure payment gateway, and real-time order tracking. It is built using Flutter and Firebase for backend services",
+            "image_path": "assets/img/metro-app.jpg",
+            "tools": "Flutter, Google Maps API",
+            "url": ""
+        },
+        {
+            "name": "DG Bank Mobile App",
+            "description": "A mobile application that allows users to browse and purchase products from various categories. The app features a user-friendly interface, secure payment gateway, and real-time order tracking. It is built using Flutter and Firebase for backend services",
+            "image_path": "assets/img/bms-app.jpg",
+            "tools": "Android SDK, Java, Postgre SQL",
+            "url": ""
+        },
+        {
+            "name": "Brave Dave",
+            "description": "A mobile application that allows users to browse and purchase products from various categories. The app features a user-friendly interface, secure payment gateway, and real-time order tracking. It is built using Flutter and Firebase for backend services",
+            "image_path": "assets/img/dave-game-2.png",
+            "tools": "SFML, C++",
+            "url": ""
+        }
     ]
 }
