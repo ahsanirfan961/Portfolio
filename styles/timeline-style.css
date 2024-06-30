@@ -45,6 +45,7 @@
     flex-direction: column;
 }
 
+
 #timeline-container {
     display: flex;
     flex-direction: column;
@@ -52,6 +53,7 @@
         color: white;
     }
 }
+
 
 .timeline-element-contents {
     display: flex;

@@ -1,6 +1,8 @@
 
 import { optionsButtonListener } from "./header-script.js";
 
+let data_loaded = '';
+
 loadDependencies().then(() => {
     addAllListeners();
     loadData();
@@ -37,9 +39,10 @@ function loadTimeline() {
 
 function loadData() {
     fetch('data.json').then(response => response.json()).then(data => {
+        data_loaded = data;
         loadIntroCardData(data);
         loadAboutSectionData(data);
-        loadTimelineData(data);
+        loadTimelineData(data.experience);
     });
 }
 
@@ -115,10 +118,11 @@ function loadAboutSectionData(data) {
     });
 }
 
-function loadTimelineData(data) {
+function loadTimelineData(timeline_data) {
     fetch('elements/timeline-bar.html').then(response => response.text()).then(barCode => {
         const timeline = document.getElementById('timeline-container');
-        data.experience.forEach(element => {
+        timeline.innerHTML = '';
+        timeline_data.forEach(element => {
             const timeline_element = document.createElement('div');
             timeline_element.className = 'timeline-element';
 
@@ -150,6 +154,8 @@ function loadDependencies() {
 function addAllListeners() {
     addScrollListeners();
     optionsButtonListener();
+    document.getElementById('ed-btn').addEventListener('click', toggleEducation);
+    document.getElementById('ex-btn').addEventListener('click', toggleExperience);
 }
 
 function addScrollListeners() {
@@ -162,4 +168,26 @@ function addScrollListeners() {
             header.classList.remove('scrolled');
         }
     });
-} 9
+}
+
+function toggleEducation() {
+    const education_button = document.getElementById('ed-btn');
+    const experience_button = document.getElementById('ex-btn');
+
+    if (education_button.classList.contains('deselected')) {
+        education_button.classList.remove('deselected');
+        experience_button.classList.add('deselected');
+        loadTimelineData(data_loaded.education);
+    }
+}
+
+function toggleExperience() {
+    const education_button = document.getElementById('ed-btn');
+    const experience_button = document.getElementById('ex-btn');
+
+    if (experience_button.classList.contains('deselected')) {
+        experience_button.classList.remove('deselected');
+        education_button.classList.add('deselected');
+        loadTimelineData(data_loaded.experience);
+    }
+}

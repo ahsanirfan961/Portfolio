@@ -12,6 +12,8 @@
     padding: 1rem;
     padding-inline: 2rem;
     font-weight: 600;
+    transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 .btn.deselected {
@@ -21,6 +23,7 @@
 @media (min-width: 1024px)
 {
     .timeline-bar {
+        z-index: 0;
         position: relative;
         .bar {
             width: 5px;
@@ -48,6 +51,11 @@
             }
         }
     }
+}
+
+.bg-gradient {
+    background-image: linear-gradient(to right, #766EFF, #61edfd);
+    width: 100%;
 }
 
 .m-1 {

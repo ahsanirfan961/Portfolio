@@ -85,5 +85,25 @@
             "organization": "Mach Vis Lab, NUST",
             "position": "Deep Learning Intern"
         }
+    ],
+    "education": [
+        {
+            "from": "2018",
+            "to": "2020",
+            "organization": "Bloomfield Hall School",
+            "position": "Matriculation with 95% marks"
+        },
+        {
+            "from": "2020",
+            "to": "2022",
+            "organization": "KIPS College",
+            "position": "F.Sc Pre-engineering with 97% marks\n1st position in DG Khan Board"
+        },
+        {
+            "from": "2022",
+            "to": "prsent\nexpected graduation 2026",
+            "organization": "National University of Science & Technology, Islamabad",
+            "position": "Software Engineering"
+        }
     ]
 }
