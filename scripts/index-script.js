@@ -1,5 +1,5 @@
 
-import { optionsButtonListener } from "./header-script.js";
+import { addNavBarListeners, optionsButtonListener } from "./header-script.js";
 
 let data_loaded = '';
 
@@ -148,12 +148,13 @@ function loadTimelineData(timeline_data) {
 }
 
 function loadDependencies() {
-    return Promise.all([loadHeader(), loadFooter(), loadIntroduction(), loadTimeline()]);
+    return Promise.all([loadHeader(), loadFooter()]).then(()=>loadIntroduction()).then(()=>loadTimeline());
 }
 
 function addAllListeners() {
     addScrollListeners();
     optionsButtonListener();
+    addNavBarListeners();
     document.getElementById('ed-btn').addEventListener('click', toggleEducation);
     document.getElementById('ex-btn').addEventListener('click', toggleExperience);
 }

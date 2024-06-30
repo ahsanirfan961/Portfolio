@@ -78,6 +78,7 @@ nav.scrolled {
 
 nav a {
     color: white;
+    cursor: pointer;
 }
 
 #header-list {
