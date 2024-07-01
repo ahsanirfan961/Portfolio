@@ -114,29 +114,58 @@
         {
             "logo_path": "assets/img/web-logo.png",
             "title": "Web Development",
-            "description": "I specialize in creating high-performance, cross-platform applications using Flutter. My expertise includes building dynamic user interfaces, integrating APIs, and optimizing performance for a seamless user experience on both iOS and Android"
+            "description": "I have a strong foundation in web development, including HTML, CSS, and JavaScript. I can create responsive and interactive websites that meet the needs of clients and users"
+        },
+        {
+            "logo_path": "assets/img/qt-logo.png",
+            "title": "Desktop Development\nwith Qt in Python",
+            "description": "I have experience in developing desktop applications using Qt and Python. I can create custom GUIs, integrate APIs, and optimize performance for a seamless user experience"
+        },
+        {
+            "logo_path": "assets/img/shopify-logo.png",
+            "title": "Store Development and Management",
+            "description": "I can create and manage a Shopify store for your business. By integrating pixel, google analytics, and other tools, I can help you track and analyze customer behavior, optimize your store for conversions, and grow your business online"
+        },
+        {
+            "logo_path": "assets/img/meta-logo.png",
+            "title": "Meta Ads Campaigns",
+            "description": "I can create or manage quality meta, instagram and facebook ads campaigns. By targeting the right audience, optimizing ad creatives, and analyzing campaign performance, I can help you reach your business goals and grow your online presence"
         }
     ],
     "projects": [
         {
             "name": "Metro Route Finder Islamabad",
-            "description": "A mobile application that allows users to browse and purchase products from various categories. The app features a user-friendly interface, secure payment gateway, and real-time order tracking. It is built using Flutter and Firebase for backend services",
+            "description": "",
             "image_path": "assets/img/metro-app.jpg",
             "tools": "Flutter, Google Maps API",
             "url": ""
         },
         {
             "name": "DG Bank Mobile App",
-            "description": "A mobile application that allows users to browse and purchase products from various categories. The app features a user-friendly interface, secure payment gateway, and real-time order tracking. It is built using Flutter and Firebase for backend services",
+            "description": "",
             "image_path": "assets/img/bms-app.jpg",
             "tools": "Android SDK, Java, Postgre SQL",
             "url": ""
         },
         {
             "name": "Brave Dave",
-            "description": "A mobile application that allows users to browse and purchase products from various categories. The app features a user-friendly interface, secure payment gateway, and real-time order tracking. It is built using Flutter and Firebase for backend services",
+            "description": "",
             "image_path": "assets/img/dave-game-2.png",
             "tools": "SFML, C++",
+            "url": ""
+        },
+        {
+            "name": "DG Bank Desktop App",
+            "description": "",
+            "image_path": "assets/img/dg-app.png",
+            "tools": "Pyqt5, Postgre SQL",
+            "url": ""
+        },
+        {
+            "name": "Autonomous System Routing",
+            "description": "",
+            "image_path": "assets/img/ns3.png",
+            "tools": "Ubuntu, NS-3, C++",
             "url": ""
         }
     ]
